@@ -23,15 +23,7 @@ To ensure the Airbnb database schema satisfies 3NF by eliminating redundant data
 ---
 
 ### Third Normal Form (3NF) — Review
-
-**Issue Identified:**
-- `users.role` stores values like `'guest'`, `'host'`, and `'admin'`.
-- The `properties` table depends on `users` where `role = 'host'`.
-- This introduces a transitive dependency: `property → user → role`.
-
-**Solution:**
-- Extract roles into a separate `roles` table.
-- Replace `users.role` with `users.role_id` referencing `roles.role_id`.
-
+- There are no transitive dependencies. Non-key attributes depend only on the primary key, and foreign keys reference primary keys of other tables.
+- status: Satisfied
 ---
 
