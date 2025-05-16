@@ -12,7 +12,7 @@ CREATE TABLE users (
   email varchar UNIQUE NOT NULL,
   password_hash varchar NOT NULL,
   phone_number varchar NOT NULL,
-  role role_type NOT NULL
+  role role_type NOT NULL,
   created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
