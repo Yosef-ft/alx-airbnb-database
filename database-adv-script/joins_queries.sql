@@ -3,7 +3,7 @@
 
 SELECT users.first_name, users.last_name,
 bookings.start_date, bookings.end_date, bookings.status, bookings.total_price
-from users INNER JOIN bookings
+FROM users INNER JOIN bookings
 on users.user_id = bookings.user_id;
 
 
@@ -11,7 +11,7 @@ on users.user_id = bookings.user_id;
 -- Left Join: retrieve all properties and their reviews
 
 SELECT properties.name, properties.description, properties.location,
-properties.location, properties.price_per_night from properties
+properties.location, properties.price_per_night FROM properties
 LEFT JOIN reviews on reviews.property_id = properties.property_id;
 
 
@@ -19,5 +19,5 @@ LEFT JOIN reviews on reviews.property_id = properties.property_id;
 
 SELECT users.first_name, users.last_name,
 bookings.start_date, bookings.end_date, bookings.status, bookings.total_price
-from users FULL OUTER JOIN bookings
+FROM users FULL OUTER JOIN bookings
 on users.user_id = bookings.user_id;
