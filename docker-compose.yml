@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: airbnb
+      POSTGRES_PASSWORD: airbnb
+      POSTGRES_DB: airbnb
+
+volumes:
+  postgres_data:
