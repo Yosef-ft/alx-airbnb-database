@@ -11,7 +11,7 @@ CREATE TABLE bookings_partitioned (
   status booking_status NOT NULL,
   created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
   CHECK (end_date > start_date)
-)PARTITION by RANGE (start_date);
+)PARTITION BY RANGE (start_date);
 
 
 
