@@ -11,8 +11,10 @@ on users.user_id = bookings.user_id;
 -- Left Join: retrieve all properties and their reviews
 
 SELECT properties.name, properties.description, properties.location,
-properties.location, properties.price_per_night FROM properties
-LEFT JOIN reviews on reviews.property_id = properties.property_id;
+properties.location, properties.price_per_night,
+reviews.comment, reviews.rating FROM properties
+LEFT JOIN reviews on reviews.property_id = properties.property_id
+ORDER BY rating DESC;
 
 
 -- Full outer join: retrieve all users and all bookings
